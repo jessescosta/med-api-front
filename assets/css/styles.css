@@ -1,0 +1,394 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.login-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.cadastro-container {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#mensagem {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#mensagem.sucesso {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#mensagem.erro {
+    background-color: #f44336;
+    color: white;
+}
+
+.cadastro-container h2 {
+    margin-bottom: 20px;
+}
+
+.menu-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.menu-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    display: block;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 10px 20px;
+    text-align: left;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+    background-color: #c2e2ff;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+#edicao-medico {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto; /* Centralize horizontalmente */
+    margin-top: 20px;
+    width: 80%; /* Largura ajustada para corresponder ao estilo dos outros elementos */
+    max-width: 400px; /* Defina a largura máxima para evitar que o formulário fique muito largo */
+    display: none;
+}
+
+#edicao-medico h3 {
+    font-size: 24px; /* Tamanho da fonte aumentado para se destacar */
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Centralize o título */
+}
+
+#edicao-paciente {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto; /* Centralize horizontalmente */
+    margin-top: 20px;
+    width: 80%; /* Largura ajustada para corresponder ao estilo dos outros elementos */
+    max-width: 400px; /* Defina a largura máxima para evitar que o formulário fique muito largo */
+    display: none;
+}
+
+#edicao-paciente h3 {
+    font-size: 24px; /* Tamanho da fonte aumentado para se destacar */
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Centralize o título */
+}
+
+#formulario-edicao label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold; /* Adicione negrito às etiquetas */
+    color: #333;
+    text-align: left; /* Alinhe o texto à esquerda */
+}
+
+#formulario-edicao input[type="text"],
+#formulario-edicao input[type="email"],
+#formulario-edicao input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; /* Aumente a margem inferior para espaçamento */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#formulario-edicao button[type="submit"],
+#formulario-edicao button[type="button"] {
+    width: 48%; /* Distribua o espaço igualmente para os botões */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 2%; /* Adicione uma margem direita para criar espaço entre os botões */
+    vertical-align: middle; /* Centralize verticalmente */
+}
+
+#paciente,
+#medico {
+    width: 50%; /* Define a largura como 100% do elemento pai */
+}
+/* Adicione uma classe para o contêiner dos botões e use flexbox para centralizá-los horizontalmente */
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo para o botão Voltar */
+#botao-voltar {
+    display: block;
+    margin: 20px auto; /* Centralizar o botão horizontalmente e adicionar margem superior */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#botao-voltar:hover {
+    background-color: #0056b3;
+}
+.lista-agendamentos td {
+    font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+/* Estilize o container do formulário */
+#consulta-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Estilize os elementos .form-group */
+.form-group {
+    margin-bottom: 30px;
+}
+
+/* Estilize os rótulos dos campos */
+.form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Estilize as entradas de texto */
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    
+}
+
+/* Estilize o botão de agendar consulta */
+#consulta-form button[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover para o botão de agendar consulta */
+#consulta-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilize a tabela de agendamentos */
+#agendamentos-lista {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#agendamentos-lista th,
+#agendamentos-lista td {
+    padding: 10px 20px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+#agendamentos-lista th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#agendamentos-lista tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#agendamentos-lista tbody tr:hover {
+    background-color: #c2e2ff;
+}
+
+/* Estilize o rótulo e o select */
+#formulario-edicao label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    text-align: center; /* Centralize o texto */
+}
+
+#formulario-edicao select {
+    width: 100%; /* Ocupa 100% da largura disponível */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/* Estilize o campo de data e hora */
+.form-group input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    /* Adicione um fundo branco para destacar o campo */
+    background-color: #fff;
+    /* Adicione sombra para dar destaque */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#token-display {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#botao-voltar {
+    background-color: #706765; /* Substitua esta cor pelo código de cor desejado */
+    color: #fff; /* Cor do texto */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efeito de transição ao passar o mouse */
+}
+#botao-voltar:hover {
+    background-color: #0c0c0c; /* Cor de fundo ao passar o mouse */
+}
+

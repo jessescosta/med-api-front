@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Agendamentos</title>
+    <link rel="stylesheet" href="assets\css\styles.css">
+</head>
+<body>
+    <h2>Listagem de Agendamentos</h2>
+    <div id="lista-agendamentos"></div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Data</th>
+                <th>Paciente</th>
+                <th>CPF</th>
+                <th>Especialidade</th>
+                <th>Medico</th>
+                <th>Email</th>
+                <th>Cancelamento</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="agendamentos-lista" class="lista-agendamentos">
+            <!-- A lista de médicos será preenchida aqui dinamicamente -->
+        </tbody>
+    </table>
+    <button id="botao-voltar" onclick="window.location.href = 'menu.html';">Voltar</button>
+    <!-- Formulário de Edição -->
+    <div id="edicao-agendamento" style="display: none;">
+        <h3>Cancelamento de Consulta</h3>
+        <form id="formulario-edicao">
+            <input type="hidden" id="agendamento-id">
+
+            <label for="motivoCancelamento">Motivo do Cancelamento:</label>
+            <select id="motivoCancelamento" name="motivoCancelamento" required>
+                <option value="PACIENTE_DESISTIU">PACIENTE_DESISTIU</option>
+                <option value="MEDICO_CANCELOU">MEDICO_CANCELOU</option>
+                <option value="OUTROS">OUTROS</option>
+            </select><br>
+
+
+            <div class="button-container">
+                <button type="submit">Salvar</button>
+                <button type="button" onclick="cancelarEdicao()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="assets\js\script_listar_agendamento.js"></script>
+</body>
+</html>
